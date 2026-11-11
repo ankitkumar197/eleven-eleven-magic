@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>11:11 — A Little Wish, A Special Person ❤️</title>
+<meta name="theme-color" content="#0b1030">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="stars" aria-hidden="true"></canvas>
+<div class="moon" aria-hidden="true"></div>
+<div id="hearts" aria-hidden="true"></div>
+<button id="music" class="icon" aria-label="Play music" aria-pressed="false">♪</button>
+
+<main>
+<!-- All visible text can be edited right here (scenes 0-6). The secret message and the five questions live in script.js (CONFIG). -->
+
+<!-- 1. WELCOME -->
+<section class="scene active" data-scene="0"><div class="wrap">
+  <h1 class="big">11:11 ✨</h1>
+  <div class="clock" aria-label="11:11"><span>11</span><i>:</i><span>11</span></div>
+  <p class="lead">Today is 11 November…</p>
+  <p>Make a wish. Maybe something beautiful is about to happen.</p>
+  <button class="btn" data-go="1">Enter My Little World ❤️</button>
+</div></section>
+
+<!-- 2. SURPRISE -->
+<section class="scene" data-scene="1"><div class="wrap">
+  <p class="lead">Someone has a little surprise for you…</p>
+  <button class="env" id="env" aria-label="Open the envelope">
+    <span class="back"></span><span class="letter">❤</span><span class="front"></span><span class="flap"></span>
+  </button>
+  <button class="btn" id="openBtn">Open Your Surprise 💌</button>
+  <div class="reveal" id="reveal">
+    <p class="quote">Some moments are special,<br>and some people make every moment special.</p>
+    <button class="btn" data-go="2">Continue ✨</button>
+  </div>
+</div></section>
+
+<!-- 3. WISH GAME -->
+<section class="scene" data-scene="2"><div class="wrap">
+  <h2>Five Wishes, One Special Moment ✨</h2>
+  <div class="dots" id="dots" aria-hidden="true"></div>
+  <p class="count" id="count" aria-live="polite"></p>
+  <div class="card q" id="qcard">
+    <label for="qans" id="qtext"></label>
+    <textarea id="qans" rows="4" placeholder="Type your answer here…"></textarea>
+    <p class="saved" id="saved">Saved ♡</p>
+  </div>
+  <div class="row">
+    <button class="btn ghost" id="prev">← Previous</button>
+    <button class="btn" id="next">Next →</button>
+  </div>
+</div></section>
+
+<!-- 4. TWO HEARTS -->
+<section class="scene" data-scene="3"><div class="wrap wide">
+  <h2>Two Hearts, Two Wishes</h2>
+  <div class="two">
+    <div class="card"><label for="w1">Your Wish ❤️</label><textarea id="w1" data-save="wish_you" rows="5" placeholder="Write your wish…"></textarea></div>
+    <div class="card"><label for="w2">My Wish ✨</label><textarea id="w2" data-save="wish_me" rows="5" placeholder="Write my wish…"></textarea></div>
+  </div>
+  <p class="quote">Different wishes, but hoping for beautiful moments together.</p>
+  <button class="btn" data-go="4">Continue ❤️</button>
+</div></section>
+
+<!-- 5. PROMISE -->
+<section class="scene" data-scene="4"><div class="wrap">
+  <div class="heart" aria-hidden="true"></div>
+  <h2>A Little Promise</h2>
+  <p class="line">Life is full of unexpected moments.</p>
+  <p class="line">Some people arrive unexpectedly<br>and slowly become a beautiful part of our story.</p>
+  <p class="line">Let's create more memories, share more smiles<br>and make ordinary moments special.</p>
+  <button class="btn line" data-go="5">Continue ✨</button>
+</div></section>
+
+<!-- 6. SECRET -->
+<section class="scene" data-scene="5"><div class="wrap">
+  <button class="btn glow" id="secretBtn">There's Something I Want to Tell You ❤️</button>
+  <p class="typed" id="typed" aria-live="polite"></p>
+  <button class="btn hidden" id="secretNext" data-go="6">One last thing ✨</button>
+</div></section>
+
+<!-- 7. FINAL -->
+<section class="scene" data-scene="6"><div class="wrap">
+  <h1 class="big">11:11 ✨</h1>
+  <p class="quote">Maybe 11:11 is just another time for everyone else,<br>but today, it reminds me of someone special.</p>
+  <p class="quote">Two hearts, two wishes,<br>and countless beautiful possibilities. ❤️</p>
+  <button class="btn" id="again">Experience Again ↻</button>
+  <button class="link" id="clear">Clear saved answers</button>
+</div></section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
